@@ -4,12 +4,50 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 
     <title>Job Application Tracker</title>
 </head>
 <body>
+
+    <header>
+        <h1 class="my-4 font-serif text-3xl font-bold">Job Application Tracker</h1>
+
+        <section id="stat">
+
+            <div class="stat-card">
+                <div class="stat-element">
+                    <p class="text-[14px] font-bold">Total</p>
+                    <p id="total" class="total-number text-[24px] font-bold">0</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-element">
+                    <p class="text-[14px] font-bold">Interview</p>
+                    <p id="interview" class="text-[24px] text-success font-bold">0</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-element">
+                    <p class="text-[14px]] font-bold">Rejected</p>
+                    <p id="rejected" class="text-[24px] text-error font-bold">0</p>
+                </div>
+            </div>
+            
+        </section>
+
+        <!--The WALL-->
+        <hr style="margin: 30px 0; border: 2px solid rgb(223, 223, 223);">
+
+    </header>
 
     
     
