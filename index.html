@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
@@ -9,11 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 
     <title>Job Application Tracker</title>
 </head>
+
 <body>
 
     <header>
@@ -41,7 +45,7 @@
                     <p id="rejected" class="text-[24px] text-error font-bold">0</p>
                 </div>
             </div>
-            
+
         </section>
 
         <!--The WALL-->
@@ -49,8 +53,256 @@
 
     </header>
 
-    
-    
+    <main>
+        <section class="flex flex-col justify-start">
+            <div class="flex justify-between ">
+                <p class="text-[22px] text-[#002C5C] font-bold">Available Jobs</p>
+                <p class="text-gray-600"><span id="total-number">0</span> jobs</p>
+            </div>
+            <div class="flex gap-4 mt-4">
+                <button id="all-tab-btn" class="btn btn-primary w-20">All</button>
+                <button id="interview-tab-btn" class="btn w-20">Interview</button>
+                <button id="reject-tab-btn" class="btn w-20">Rejected</button>
+            </div>
+        </section>
+
+        <section id="all-cards" class="mt-4 flex flex-col gap-4">
+           
+            <div class="card flex-row justify-between p-8">
+                <div class="flex flex-col gap-4">
+                    <div>
+                        <h2 class="company-name card-title text-2xl">Lockheed Martin</h2>
+                        <p class="position text-xl text-gray-500 mt-1">Avionics Systems Engineer</p>
+                    </div>
+
+                    <p class="info text-base-content/50">Fort Worth, TX • Full-time • $150,000 – $250,000</p>
+
+                    <div>
+                        <span class="badge  bg-gray-200 px-4 py-3 font-medium">NOT APPLIED</span>
+                        <p class="description mt-2 text-base leading-relaxed">
+                            Develop avionics control systems and flight management software using Node.js and real-time
+                            databases.
+                        </p>
+                    </div>
+
+                    <div class="card-actions gap-3">
+                        <button class="btn-interview btn btn-outline btn-success px-6">INTERVIEW</button>
+                        <button class="btn-rejected btn-rejected btn btn-outline btn-error px-6">REJECTED</button>
+                    </div>
+                </div>
+
+                <button class="btn btn-circle delete-btn">
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
+            </div>
+
+
+            
+            <div class="card flex-row justify-between p-8">
+                <div class="flex flex-col gap-4">
+                    <div>
+                        <h2 class="company-name card-title text-2xl">Boeing</h2>
+                        <p class="position text-xl text-gray-500 mt-1">Mobile Applications Engineer</p>
+                    </div>
+
+                    <p class="info text-base-content/50">Seattle, WA • Hybrid • $160,000 – $280,000</p>
+
+                    <div>
+                        <span class="badge  bg-gray-200 px-4 py-3 font-medium">NOT APPLIED</span>
+                        <p class="description mt-2 text-base leading-relaxed">
+                            Build aircraft diagnostic mobile apps for maintenance crews and flight operations teams.
+                        </p>
+                    </div>
+
+                    <div class="card-actions gap-3">
+                        <button class="btn-interview btn btn-outline btn-success px-6">INTERVIEW</button>
+                        <button class="btn-rejected btn btn-outline btn-error px-6">REJECTED</button>
+                    </div>
+                </div>
+                <button class="btn btn-circle delete-btn">
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
+            </div>
+
+
+            
+            <div class="card flex-row justify-between p-8">
+                <div class="flex flex-col gap-4">
+                    <div>
+                        <h2 class="company-name card-title text-2xl">Northrop Grumman</h2>
+                        <p class="position text-xl text-gray-500 mt-1">Systems Integration Engineer</p>
+                    </div>
+
+                    <p class="info text-base-content/50">Los Angeles, CA • On-site • $170,000 – $300,000</p>
+
+                    <div>
+                        <span class="badge  bg-gray-200 px-4 py-3 font-medium">NOT APPLIED</span>
+                        <p class="description mt-2 text-base leading-relaxed">
+                            Engineer missile guidance systems and defense infrastructure platforms using Spring Boot
+                            microservices.
+                        </p>
+                    </div>
+
+                    <div class="card-actions gap-3">
+                        <button class="btn-interview btn btn-outline btn-success px-6">INTERVIEW</button>
+                        <button class="btn-rejected btn btn-outline btn-error px-6">REJECTED</button>
+                    </div>
+                </div>
+                <button class="btn btn-circle delete-btn">
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
+            </div>
+
+
+            
+            <div class="card flex-row justify-between p-8">
+                <div class="flex flex-col gap-4">
+                    <div>
+                        <h2 class="company-name card-title text-2xl">Raytheon</h2>
+                        <p class="position text-xl text-gray-500 mt-1">Infrastructure & Operations Engineer</p>
+                    </div>
+
+                    <p class="info text-base-content/50">Waltham, MA • Full-time • $155,000 – $270,000</p>
+
+                    <div>
+                        <span class="badge  bg-gray-200 px-4 py-3 font-medium">NOT APPLIED</span>
+                        <p class="description mt-2 text-base leading-relaxed">
+                            Manage deployment pipelines for radar and defense systems using Docker and cloud
+                            infrastructure.
+                        </p>
+                    </div>
+
+                    <div class="card-actions gap-3">
+                        <button class="btn-interview btn btn-outline btn-success px-6">INTERVIEW</button>
+                        <button class="btn-rejected btn btn-outline btn-error px-6">REJECTED</button>
+                    </div>
+                </div>
+                <button class="btn btn-circle delete-btn">
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
+            </div>
+
+
+            
+            <div class="card flex-row justify-between p-8">
+                <div class="flex flex-col gap-4">
+                    <div>
+                        <h2 class="company-name card-title text-2xl">Airbus</h2>
+                        <p class="position text-xl text-gray-500 mt-1">Cockpit UI/UX Engineer</p>
+                    </div>
+
+                    <p class="info text-base-content/50">Toulouse, France • Hybrid • $140,000 – $240,000</p>
+
+                    <div>
+                        <span class="badge  bg-gray-200 px-4 py-3 font-medium">NOT APPLIED</span>
+                        <p class="description mt-2 text-base leading-relaxed">
+                            Design pilot interfaces and synthetic vision systems using React for next-generation
+                            aircraft cockpits.
+                        </p>
+                    </div>
+
+                    <div class="card-actions gap-3">
+                        <button class="btn-interview btn btn-outline btn-success px-6">INTERVIEW</button>
+                        <button class="btn-rejected btn btn-outline btn-error px-6">REJECTED</button>
+                    </div>
+                </div>
+                <button class="btn btn-circle delete-btn">
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
+            </div>
+
+
+           
+            <div class="card flex-row justify-between p-8">
+                <div class="flex flex-col gap-4">
+                    <div>
+                        <h2 class="company-name card-title text-2xl">Bombardier</h2>
+                        <p class="position text-xl text-gray-500 mt-1">Flight Systems Test Engineer</p>
+                    </div>
+
+                    <p class="info text-base-content/50">Toronto, Canada • On-site • $130,000 – $220,000</p>
+
+                    <div>
+                        <span class="badge  bg-gray-200 px-4 py-3 font-medium">NOT APPLIED</span>
+                        <p class="description mt-2 text-base leading-relaxed">
+                            Automate testing for flight control systems and avionics equipment using advanced test
+                            frameworks.
+                        </p>
+                    </div>
+
+                    <div class="card-actions gap-3">
+                        <button class="btn-interview btn btn-outline btn-success px-6">INTERVIEW</button>
+                        <button class="btn-rejected btn btn-outline btn-error px-6">REJECTED</button>
+                    </div>
+                </div>
+                <button class="btn btn-circle delete-btn">
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
+            </div>
+
+
+            
+            <div class="card flex-row justify-between p-8">
+                <div class="flex flex-col gap-4">
+                    <div>
+                        <h2 class="company-name card-title text-2xl">Embraer</h2>
+                        <p class="position text-xl text-gray-500 mt-1">Aircraft Systems Architect</p>
+                    </div>
+
+                    <p class="info text-base-content/50">São Paulo, Brazil • Hybrid • $145,000 – $260,000</p>
+
+                    <div>
+                        <span class="badge  bg-gray-200 px-4 py-3 font-medium">NOT APPLIED</span>
+                        <p class="description mt-2 text-base leading-relaxed">
+                            Build aircraft management platforms for aerospace supply chain and manufacturing operations.
+                        </p>
+                    </div>
+
+                    <div class="card-actions gap-3">
+                        <button class="btn-interview btn btn-outline btn-success px-6">INTERVIEW</button>
+                        <button class="btn-rejected btn btn-outline btn-error px-6">REJECTED</button>
+                    </div>
+                </div>
+                <button class="btn btn-circle delete-btn">
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
+            </div>
+
+
+            
+            <div class="card flex-row justify-between p-8">
+                <div class="flex flex-col gap-4">
+                    <div>
+                        <h2 class="company-name card-title text-2xl">Leonardo</h2>
+                        <p class="position text-xl text-gray-500 mt-1">Defense Systems Security Engineer</p>
+                    </div>
+
+                    <p class="info text-base-content/50">Rome, Italy • Full-time • $180,000 – $320,000</p>
+
+                    <div>
+                        <span class="badge  bg-gray-200 px-4 py-3 font-medium">NOT APPLIED</span>
+                        <p class="description mt-2 text-base leading-relaxed">
+                            Protect military aircraft systems and secure defense networks from cyber threats and
+                            vulnerabilities.
+                        </p>
+                    </div>
+
+                    <div class="card-actions gap-3">
+                        <button class="btn-interview btn btn-outline btn-success px-6">INTERVIEW</button>
+                        <button class="btn-rejected btn btn-outline btn-error px-6">REJECTED</button>
+                    </div>
+                </div>
+                <button class="btn btn-circle delete-btn">
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+
+
     <script src="script.js"></script>
 </body>
+
 </html>
